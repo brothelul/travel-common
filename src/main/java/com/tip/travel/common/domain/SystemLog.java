@@ -1,8 +1,9 @@
 package com.tip.travel.common.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class SystemLog {
+public class SystemLog implements Serializable {
     private Integer actionType;
     private String methodName;
     private Integer userId;
@@ -14,6 +15,7 @@ public class SystemLog {
     private String ipAddress;
     private Date startDatetime;
     private Date endDatetime;
+    private Long timeCost;
 
     public Integer getActionType() {
         return actionType;
@@ -101,5 +103,13 @@ public class SystemLog {
 
     public void setEndDatetime(Date endDatetime) {
         this.endDatetime = endDatetime;
+    }
+
+    public Long getTimeCost() {
+        return timeCost;
+    }
+
+    public void setTimeCost(Long timeCost) {
+        this.timeCost = timeCost;
     }
 }
